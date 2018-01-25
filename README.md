@@ -20,6 +20,7 @@ You will then use the following values for your configuration in the following s
 |OPENID_TOKEN_URL||https://login.microsoftonline.com/common/oauth2/token|
 |OPENID_CLIENT_ID||In the app description, under the key "Application id"|
 |OPENID_CLIENT_SECRET||The secret you created ealier|
+|OPENID_NAME_PROP|email|The key in the jwt payload holding the name of the user (ex: `name` in our case)|
 |OPENID_EMAIL_PROP|email|The key in the jwt payload holding the email of the user (ex: `upn` in our case)|
 
 
@@ -41,7 +42,8 @@ Modify `docker-compose.yml` and add this lines under the `base` service :
       OPENID_AUTHORIZE_URL:
       OPENID_TOKEN_URL: 
       OPENID_CLIENT_ID: 
-      OPENID_CLIENT_SECRET: 
+      OPENID_CLIENT_SECRET:
+      OPENID_NAME_PROP:
       OPENID_EMAIL_PROP: 
 ```
 
@@ -58,6 +60,7 @@ OPENID_AUTHORIZE_URL = env('OPENID_AUTHORIZE_URL')
 OPENID_TOKEN_URL = env('OPENID_TOKEN_URL')
 OPENID_CLIENT_ID = env('OPENID_CLIENT_ID')
 OPENID_CLIENT_SECRET = env('OPENID_CLIENT_SECRET')
+OPENID_NAME_PROP = env('OPENID_NAME_PROP')
 OPENID_EMAIL_PROP = env('OPENID_EMAIL_PROP')
 SENTRY_FEATURES['organizations:sso'] = True
 ```

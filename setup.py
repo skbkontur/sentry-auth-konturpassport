@@ -18,7 +18,7 @@ tests_require = [
 
 setup(
     name='sentry-auth-openid',
-    version='0.2.2',
+    version='1.0.0',
     author='lfbvr',
     author_email='',
     url='https://github.com/LFBVR/sentry-auth-openid',
