@@ -39,7 +39,7 @@ class FetchUser(AuthView):
             return helper.error(ERR_INVALID_RESPONSE)
 
         if not payload.get(EMAIL_PROP):
-            logger.error('Missing %s in id_token payload: %s' % (EMAIL_PROP, id_token))
+            logger.error('Missing %s in id_token payload: %s' % (EMAIL_PROP, payload))
             return helper.error(ERR_INVALID_RESPONSE)
 
         helper.bind_state('user', payload)
