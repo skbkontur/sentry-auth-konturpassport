@@ -7,12 +7,15 @@ This is a fork to make it work with AzureAD.
 # Setup (AzureAD)
 
 In Azure Portal, go to `Active Directory` service and register a new app.
+
 The redirect URL you need to provide will be : `http://your.sentry.url/auth/sso`.
+
 Create a new secret for this application (using the name you want for this secret).
 
 You will then use the following values for your configuration in the following step :
 
 |Configuration key|Default|Where to find it|
+| ------------- | ------------- | ------------- |
 |OPENID_AUTHORIZE_URL||https://login.microsoftonline.com/common/oauth2/authorize|
 |OPENID_TOKEN_URL||https://login.microsoftonline.com/common/oauth2/token|
 |OPENID_CLIENT_ID||In the app description, under the key "Application id"|
