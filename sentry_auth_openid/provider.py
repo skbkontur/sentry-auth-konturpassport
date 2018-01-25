@@ -6,8 +6,8 @@ from sentry.auth.providers.oauth2 import (
 
 from .constants import (
     AUTHORIZE_URL, ACCESS_TOKEN_URL, CLIENT_ID, CLIENT_SECRET, DATA_VERSION,
-    SCOPE
-)
+    SCOPE,
+    EMAIL_PROP)
 from .views import FetchUser, OpenIDConfigureView
 
 
@@ -78,8 +78,8 @@ class OpenIDOAuth2Provider(OAuth2Provider):
         # TODO(dcramer): we should move towards using user_data['sub'] as the
         # primary key per the Google docs
         return {
-            'id': user_data['email'],
-            'email': user_data['email'],
-            'name': user_data['email'],
+            'id': user_data[EMAIL_PROP],
+            'email': user_data[EMAIL_PROP],
+            'name': user_data[EMAIL_PROP],
             'data': self.get_oauth_data(data),
         }

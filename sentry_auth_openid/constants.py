@@ -16,3 +16,5 @@ ERR_INVALID_RESPONSE = 'Unable to fetch user information.  Please check the log.
 SCOPE = getattr(settings, 'OPENID_SCOPE', 'openid email')
 
 DATA_VERSION = '1'
+
+EMAIL_PROP = getattr('OPENID_EMAIL_PROP', 'email')

@@ -8,7 +8,7 @@ Install
 
 ::
 
-    $ pip install https://github.com/TableflippersAnonymous/sentry-auth-openid/archive/master.zip
+    $ pip install https://github.com/LFBVR/sentry-auth-openid/archive/master.zip
 
 Setup
 -----
@@ -29,10 +29,7 @@ Finally, obtain the API keys and plug them into your ``sentry.conf.py``:
 .. code-block:: python
 
     OPENID_AUTHORIZE_URL = ""
-
     OPENID_TOKEN_URL = ""
-
     OPENID_CLIENT_ID = ""
-
     OPENID_CLIENT_SECRET = ""
-
+    OPENID_EMAIL_PROP = "email"
