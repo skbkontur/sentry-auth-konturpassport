@@ -75,6 +75,7 @@ class OpenIDOAuth2Provider(OAuth2Provider):
         # }
         data = state['data']
         user_data = state['user']
+        data['expires_in'] = int(data['expires_in'])
         # TODO(dcramer): we should move towards using user_data['sub'] as the
         # primary key per the Google docs
         return {
