@@ -18,10 +18,10 @@ tests_require = [
 
 setup(
     name='sentry-auth-openid',
-    version='0.2.0.dev0',
-    author='Tableflippers Anonymous',
-    author_email='cobi@jacobicarter.com',
-    url='https://github.com/tableflippersanonymous/sentry-auth-openid',
+    version='0.2.1',
+    author='lfbvr',
+    author_email='',
+    url='https://github.com/LFBVR/sentry-auth-openid',
     description='OpenID authentication provider for Sentry',
     long_description=__doc__,
     license='Apache 2.0',
