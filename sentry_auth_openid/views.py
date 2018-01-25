@@ -7,7 +7,7 @@ from sentry.utils import json
 
 from .constants import (
     ERR_INVALID_RESPONSE,
-)
+    EMAIL_PROP)
 from .utils import urlsafe_b64decode
 
 logger = logging.getLogger('sentry.auth.openid')
@@ -38,8 +38,8 @@ class FetchUser(AuthView):
             logger.error(u'Unable to decode id_token payload: %s' % exc, exc_info=True)
             return helper.error(ERR_INVALID_RESPONSE)
 
-        if not payload.get('email'):
-            logger.error('Missing email in id_token payload: %s' % id_token)
+        if not payload.get(EMAIL_PROP):
+            logger.error('Missing %s in id_token payload: %s' % (EMAIL_PROP, id_token))
             return helper.error(ERR_INVALID_RESPONSE)
 
         helper.bind_state('user', payload)
