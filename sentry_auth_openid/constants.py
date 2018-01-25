@@ -13,6 +13,6 @@ CLIENT_SECRET = getattr(settings, 'OPENID_CLIENT_SECRET', None)
 
 ERR_INVALID_RESPONSE = 'Unable to fetch user information.  Please check the log.'
 
-SCOPE = 'openid email'
+SCOPE = getattr(settings, 'OPENID_SCOPE', 'openid email')
 
 DATA_VERSION = '1'
