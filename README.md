@@ -61,3 +61,8 @@ OPENID_CLIENT_SECRET = env('OPENID_CLIENT_SECRET')
 OPENID_EMAIL_PROP = env('OPENID_EMAIL_PROP')
 SENTRY_FEATURES['organizations:sso'] = True
 ```
+
+You can now start sentry (you may need to rebuild `base` image through `docker-compose build base`).
+
+Once connected, there will be a new key `Auth` under `Manage` in your organization.
+In this view, you will be able to choose to configure a new SSO service. 
