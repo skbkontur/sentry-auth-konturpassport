@@ -17,4 +17,4 @@ SCOPE = getattr(settings, 'OPENID_SCOPE', 'openid email')
 
 DATA_VERSION = '1'
 
-EMAIL_PROP = getattr('OPENID_EMAIL_PROP', 'email')
+EMAIL_PROP = getattr(settings, 'OPENID_EMAIL_PROP', 'email')
