@@ -37,7 +37,7 @@ class KonturPassport2Provider(OAuth2Provider):
     client_secret = CLIENT_SECRET
 
     def __init__(self, **config):
-        super(OpenIDOAuth2Provider, self).__init__(**config)
+        super(KonturPassport2Provider, self).__init__(**config)
 
     def get_configure_view(self):
         return OpenIDConfigureView.as_view()
