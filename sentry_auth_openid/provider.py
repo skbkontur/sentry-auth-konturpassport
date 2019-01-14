@@ -31,8 +31,8 @@ class OpenIDOAuth2Login(OAuth2Login):
         return params
 
 
-class OpenIDOAuth2Provider(OAuth2Provider):
-    name = 'OpenID'
+class KonturPassport2Provider(OAuth2Provider):
+    name = 'Kontur.Passport'
     client_id = CLIENT_ID
     client_secret = CLIENT_SECRET
 
